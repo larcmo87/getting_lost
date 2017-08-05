@@ -1,3 +1,6 @@
+$("p").click(function(){
+        console.log("this works");
+    });
  // Initialize Firebase
 	  var config = {
 	    apiKey: "AIzaSyCrtYZiJnWVqqPmuOjwcOOw9h4kD1kqJOw",
