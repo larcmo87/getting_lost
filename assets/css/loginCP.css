@@ -1,0 +1,17 @@
+h2 {
+	text-align: center;
+	color: #242e33;
+	font-weight: 400;
+}
+
+.jumbotron {
+	background-color: #2babe2;
+	opacity: .6;
+	margin-top: 50px;
+	margin-right: 50px;
+	margin-left: 50px;
+}
+
+body {
+	background-image: url(../../assets/images/getlost-signin.png);
+}
