@@ -2,84 +2,16 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-	<title>Getting Lost Sign In</title>
-
-  
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-	<!-- link to firebase goes here -->
-  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
-	<!-- link to font awesome if we want cool icons -->
-
-	<!-- link to our style sheet -->
-	<link rel="stylesheet" type="text/css" href="assets/css/signin.css">
-
+	<title>Document</title>
+	 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
 </head>
 <body>
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '336533230118458',
-          cookie     : true,
-          xfbml      : true,
-          version    : 'v2.8'
-        });
-        FB.AppEvents.logPageView();   
-      };
-
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-
-
-
-    // FB.getLoginStatus(function(response) {
-    //     statusChangeCallback(response);
-    // });
-    </script>
-	<!-- beginning container div -->
-	<div class="container">
-
-      <form class="form-signin">
-        <h2 class="form-signin-heading">Please sign in</h2>
-        
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-        
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-       <!--  <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div> -->
-        <button class="btn btn-lg btn-primary btn-block" id="btnSignin" type="submit">Sign in</button>
-        <button class="btn btn-lg btn-secondary btn-block" id="btnSignUp" type="button">Sign Up</button>
-        <h4 id="error_message"></h4>
-        <button class="btn btn-lg btn-primary btn-block" id="btnSigninFB" type="button">Sign with FaceBook</button>
-      </form>
-      <
-      <fb:login-button 
-  scope="public_profile,email"
-  onlogin="checkLoginState();">
-</fb:login-button>
-	<!-- ending container div -->
-    </div> 
-    
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="assets/scripts/logIn.js"></script>
-
+	<div id="firebaseui-auth-container"></div>
 	
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/scripts/logIn.js"></script>
 </html>
