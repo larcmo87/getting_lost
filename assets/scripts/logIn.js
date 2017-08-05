@@ -146,7 +146,7 @@
         signInOptions: [
           // Leave the lines as is for the providers you want to offer your users.
           firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-           firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+           //firebase.auth.FacebookAuthProvider.PROVIDER_ID,
           // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
           // firebase.auth.GithubAuthProvider.PROVIDER_ID,
           firebase.auth.EmailAuthProvider.PROVIDER_ID,
@@ -160,3 +160,21 @@
       var ui = new firebaseui.auth.AuthUI(firebase.auth());
       // The start method will wait until the DOM is loaded.
       ui.start('#firebaseui-auth-container', uiConfig);
+
+
+      var user = firebase.auth().currentUser;
+
+      if (user != null) {
+          console.log(user.displayName);
+          console.log(user.email);
+          console.log(user.photoURL);
+          console.log(user.emailVerified);
+         var userId = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
+                           // this value to authenticate with your backend server, if
+                           // you have one. Use User.getToken() instead.
+
+
+           firebase.ref(userId).set();
+        }
+
+       
