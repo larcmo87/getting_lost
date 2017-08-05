@@ -1,7 +1,13 @@
 body{
   background-color: silver;
 }
+
+.container{
+
+}
+
 #header{
+  background-color: white;
   text-align: center;
   border-style: solid;
   border-color: red;
@@ -9,6 +15,7 @@ body{
 }
 
 #content{
+  background-color: lightblue;
   border-style: solid;
   border-radius: 5px;
   border-color: red;
@@ -16,6 +23,7 @@ body{
 }
 
 #list{
+  background-color: white;
   margin-left: 30px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -25,6 +33,7 @@ body{
   border-width: 1px;
 }
 #map{
+  background-color: white;
   margin-left: 30px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -32,4 +41,8 @@ body{
   border-radius: 5px;
   border-color: blue;
   border-width: 1px;
+}
+img{
+  display: block;
+    margin: auto;
 }
