@@ -52,3 +52,10 @@ img{
   display: block;
     margin: auto;
 }
+#createAdd{
+  border-radius: 5px;
+}
+
+#logOff{
+  border-radius: 5px;
+}

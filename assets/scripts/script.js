@@ -34,14 +34,32 @@ $(document).ready(function(){
  			console.log("In log in");
  			
  			promise.catch(console.log(e.message));
+
+ 			var user = firebase.auth().currentUser;
+
+ 			if (user != null) {
+				  console.log(user.displayName);
+				  console.log(user.email);
+				  console.log(user.photoURL);
+				  console.log(user.emailVerified);
+				  console.log(user.uid);  // The user's ID, unique to the Firebase project. Do NOT use
+				                   // this value to authenticate with your backend server, if
+				                   // you have one. Use User.getToken() instead.
+				}
  		});
 
  		firebase.auth().onAuthStateChanged(function(firebaseUser){
  			if(firebaseUser){
 
+<<<<<<< HEAD
  				// console.log("changed");
  				
  					window.location.href = "createAdvert.html";
+=======
+ 				console.log(firebaseUser);
+ 				
+ 					//window.location.href = "search.html";
+>>>>>>> 3891ae2a969c846f36a804a60d1366ce360150a9
   			
 
  			}
@@ -98,6 +116,7 @@ $(document).ready(function(){
 				
  		});
 
+<<<<<<< HEAD
  		$("#btnSigninFB").on("click",function(){
  				//Login with facebook authentication
 	 		var provider = new firebase.auth.FacebookAuthProvider();
@@ -158,4 +177,6 @@ $(document).ready(function(){
 		});
 
  		
+=======
+>>>>>>> 3891ae2a969c846f36a804a60d1366ce360150a9
 });
