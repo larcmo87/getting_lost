@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Create an Ad</title>
+	<title>Create</title>
 
 	<!-- link to bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -14,19 +14,66 @@
 	 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
 
 	<!-- link to our style sheet -->
-	<!-- <link rel="stylesheet" type="text/css" href="assets/css/adstyle.css"> -->
+	<link rel="stylesheet" type="text/css" href="assets/css/adstyle.css">
 
 	<!-- moment.js reference -->
 
 </head>
 <body>
 
+	<!-- master container div -->
 	<div class="container">
-		<div class="jumbotron">
 
-			<h1><i class="fa fa-tasks"></i> Create Your Ad Below</h1>
+      <!-- Static navbar -->
+      <nav id="header" class="navbar navbar-default">
 
-		</div>
+        <div class="container-fluid">
+
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <a id="header-brand" class="navbar-brand" href="#">YetiPreneur</a>
+
+          </div>
+
+          <div id="navbar" class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav">
+
+			<!-- li class active for hover -->
+
+              <li><a id="home" href="search.html">Home</a></li>
+              <li><a id="search" href="#">Search</a></li>
+              
+             
+            </ul>
+
+            <img id="yeti" src="assets/images/yeti-logo.png">
+
+			<!-- nav bar right items -->
+
+            <ul class="nav navbar-nav navbar-right">
+
+            <!-- active class for background hover -->	
+
+            <!-- span class sr-only -->
+              <li><a id="profile" href="#">Profile</a></li>
+
+              <li><a id="yourAds" href="#">Your Ads</a></li>
+
+              <li><a id="logOff" href="#" id="logOff">Log Off</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
 
 		<div class="row">
 			<div class-"col-lg-12">
@@ -57,7 +104,7 @@
 								</div>
 
 								<div class="form-group">
-									<label for="street-input">Stree Address</label>
+									<label for="street-input">Street Address</label>
 									<input class="form-control" id="street-input" type="text">
 								</div>
 								
@@ -87,7 +134,7 @@
 				<div class="panel panel-primary">
 
 					<div class="panel-heading">
-						<h3 class="panel-title"><i class="fa fa-user"></i>Seller Info</h3>
+						<h3 class="panel-title"><i class="fa fa-user"></i> Seller Info</h3>
 					</div>
 
 						<div class="panel-body">
@@ -115,11 +162,15 @@
 						</div>
 					</div>
 
+				<!-- Upload photos
+
 				<div class="panel panel-primary">
 
 					<div class="panel-heading">
 						<h3 class="panel-title"><i class="fa fa-picture-o"></i> Upload Photos</h3>
 					</div>
+
+				-->
 
 					<!-- Entry form | Upload photos -->
 
@@ -143,10 +194,12 @@
  -->
 				</div>
 
+
+
 					<!-- master submit button or continue -->
 
 					<button class="btn btn-primary" id="add-train-btn" type="submit">Submit</button>
-					<button class="btn btn-secondary" id="logOff" type="button">Log Off</button>
+					<button class="btn btn-secondary" id="cancel" type="button">Cancel</button>
 
 				<!-- div class col lg 12 ending div -->
 				</div>
