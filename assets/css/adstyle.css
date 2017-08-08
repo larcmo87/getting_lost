@@ -1,0 +1,38 @@
+#header {
+	background-color: #effaff;
+}
+
+#header-brand {
+	color: #242e33;
+}
+
+#home, #search, #profile, #yourAds, #logOff {
+	color: #242e33;
+}
+
+#header-brand:hover {
+	background-color: #2babe2;
+}
+
+#home:hover, #search:hover, #profile:hover, #yourAds:hover, #logOff:hover {
+	background-color: #2babe2;
+}
+
+img#yeti {
+	display: inline-block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.row {
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+#cancel:hover {
+	background-color: white;
+}
+
+body {
+	background-color: #2babe2;
+}

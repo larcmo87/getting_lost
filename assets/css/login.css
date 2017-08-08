@@ -1,0 +1,14 @@
+body {
+	background-color: #effaff;
+}
+
+.jumbotron {
+	text-align: center;
+	background-color: #effaff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h2 {
+	color: #242e33;
+}
