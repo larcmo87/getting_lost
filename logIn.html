@@ -23,32 +23,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/signin.css">
 
 </head>
-<body>
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '336533230118458',
-          cookie     : true,
-          xfbml      : true,
-          version    : 'v2.8'
-        });
-        FB.AppEvents.logPageView();   
-      };
 
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-
-
-
-    // FB.getLoginStatus(function(response) {
-    //     statusChangeCallback(response);
-    // });
-    </script>
 	<!-- beginning container div -->
 	<div class="container">
 
@@ -66,19 +41,16 @@
         <button class="btn btn-lg btn-primary btn-block" id="btnSignin" type="submit">Sign in</button>
         <button class="btn btn-lg btn-secondary btn-block" id="btnSignUp" type="button">Sign Up</button>
         <h4 id="error_message"></h4>
-        <button class="btn btn-lg btn-primary btn-block" id="btnSigninFB" type="button">Sign with FaceBook</button>
+        
       </form>
-      <
-      <fb:login-button 
-  scope="public_profile,email"
-  onlogin="checkLoginState();">
-</fb:login-button>
+      
+     
 	<!-- ending container div -->
     </div> 
     
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="assets/scripts/logIn.js"></script>
+  <script src="assets/scripts/script.js"></script>
 
 	
 </body>

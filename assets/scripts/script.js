@@ -30,6 +30,8 @@ $(document).ready(function(){
  			console.log(txtEmail + " " + txtPassword);
  			const auth = firebase.auth();
  			const promise = auth.signInWithEmailAndPassword(txtEmail, txtPassword);
+
+ 			console.log("In log in");
  			
  			promise.catch(console.log(e.message));
  		});
@@ -38,9 +40,9 @@ $(document).ready(function(){
  			if(firebaseUser){
 
  				// console.log("changed");
- 				if(displaySearchPage){
- 					window.location.href = "search.html";
-  				}
+ 				
+ 					window.location.href = "createAdvert.html";
+  			
 
  			}
 
@@ -123,6 +125,37 @@ $(document).ready(function(){
 			});
 
  		});
+
+ 		$("add-train-btn").on("click",function(){
+ 			var category = $("#category-input").val();
+ 			var subCategory = $("#subCat-input").val();
+
+ 			var newAd = {
+ 				category : category,
+ 				subCategory :subCategory
+ 			}
+
+ 			var user = firebase.auth().currentUser;
+
+	      if (user != null) {
+	          console.log(user.displayName);
+	          console.log(user.email);
+	          console.log(user.photoURL);
+	          console.log(user.emailVerified);
+	         var userId = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
+	                           // this value to authenticate with your backend server, if
+	                           // you have one. Use User.getToken() instead.
+
+	          console.log(userId);             
+	           firebase.ref(userId).set(newAd);
+	        }
+
+ 		});
+
+ 		$("#logOff").on("click",function(){
+			firebase.auth().signOut();
+			window.location.href = "index.html";
+		});
 
  		
 });

@@ -6,6 +6,11 @@ body{
 
 }
 
+#map {
+  height: 600px;
+  width: 100%;
+}
+    
 #header{
   background-color: white;
   text-align: center;
@@ -15,6 +20,7 @@ body{
 }
 
 #content{
+  
   background-color: lightblue;
   border-style: solid;
   border-radius: 5px;
@@ -32,7 +38,7 @@ body{
   border-color: blue;
   border-width: 1px;
 }
-#map{
+/*#map{
   background-color: white;
   margin-left: 30px;
   margin-top: 5px;
@@ -41,7 +47,7 @@ body{
   border-radius: 5px;
   border-color: blue;
   border-width: 1px;
-}
+}*/
 img{
   display: block;
     margin: auto;
