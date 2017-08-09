@@ -51,15 +51,15 @@ $(document).ready(function(){
  		firebase.auth().onAuthStateChanged(function(firebaseUser){
  			if(firebaseUser){
 
-<<<<<<< HEAD
+
  				// console.log("changed");
  				
  					window.location.href = "createAdvert.html";
-=======
+
  				console.log(firebaseUser);
  				
  					//window.location.href = "search.html";
->>>>>>> 3891ae2a969c846f36a804a60d1366ce360150a9
+
   			
 
  			}
@@ -116,7 +116,7 @@ $(document).ready(function(){
 				
  		});
 
-<<<<<<< HEAD
+
  		$("#btnSigninFB").on("click",function(){
  				//Login with facebook authentication
 	 		var provider = new firebase.auth.FacebookAuthProvider();
@@ -176,7 +176,5 @@ $(document).ready(function(){
 			window.location.href = "index.html";
 		});
 
- 		
-=======
->>>>>>> 3891ae2a969c846f36a804a60d1366ce360150a9
+
 });
