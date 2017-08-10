@@ -28,7 +28,7 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 //mapquest geocode url
-var mapQuestGeoCodeURL = "http://www.mapquestapi.com/geocoding/v1/address?key=i2tXrbVFQ3b8X2QGzjRhUVJgKWgaRxx6&location=";
+var mapQuestGeoCodeURL = "https://www.mapquestapi.com/geocoding/v1/address?key=i2tXrbVFQ3b8X2QGzjRhUVJgKWgaRxx6&location=";
 
 
 var getSearchLocationLongLat = function(address){
