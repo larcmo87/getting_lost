@@ -1,31 +1,70 @@
+/*** header ***/
+#navver {
+  background-color: #effaff;
+}
+
+#header-brand {
+  color: #242e33;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#home, #search, #about, #logOff {
+  color: #242e33;
+}
+
+#header-brand:hover {
+  background-color: #2babe2;
+}
+
+#home:hover, #search:hover, #about:hover, #logOff:hover {
+  background-color: #2babe2;
+}
+
+img#yeti {
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*** jumbotron header ***/
+#header{
+  background-color: #effaff;
+  text-align: center;
+  border: solid #337ab7 1px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+#title {
+  color: #242e33;
+}
+
+/*** body content ***/
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
 body{
-  background-color: silver;
+  background-color: #2babe2;
 }
 
-.container{
-
+h4 {
+  color: #242e33;
 }
+
+/*** map content ***/
 
 #map {
   height: 600px;
   width: 100%;
 }
     
-#header{
-  background-color: white;
-  text-align: center;
-  border-style: solid;
-  border-color: red;
-  border-width: 1px;
-}
-
-#content{
-  
-  background-color: lightblue;
-  border-style: solid;
+#content {
+  background-color: #effaff;
+  border: solid #337ab7 1px;
   border-radius: 5px;
-  border-color: red;
-  border-width: 1px;
 }
 
 #list{

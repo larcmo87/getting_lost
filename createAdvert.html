@@ -8,7 +8,10 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 	<!-- link to font awesome -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- firebase link -->
+	<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
 
 	<!-- link to our style sheet -->
 	<link rel="stylesheet" type="text/css" href="assets/css/adstyle.css">
@@ -34,7 +37,7 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a id="header-brand" class="navbar-brand" href="#">YetiPreneur</a>
+            <img id="yeti" src="assets/images/yeti-logo.png"> 
 
           </div>
 
@@ -44,12 +47,10 @@
 
 			<!-- li class active for hover -->
 
-              <li><a id="home" href="search.html">Home</a></li>
-                          
-             
-            </ul>
+			  <a id="header-brand" class="navbar-brand" href="#">YetiPreneur</a>
 
-            <img id="yeti" src="assets/images/yeti-logo.png">
+              <li><a id="home" href="search.html">Home</a></li>                                     
+            </ul>
 
 			<!-- nav bar right items -->
 
@@ -58,7 +59,7 @@
             <!-- active class for background hover -->	
 
             <!-- span class sr-only -->
-              <li><a id="yourAds" href="#">Your Ads</a></li>
+              <li><a id="about" href="#">About</a></li>
 
               <li><a id="logOff" href="#" id="logOff">Log Off</a></li>
             </ul>
@@ -94,7 +95,7 @@
 								</div>
 								
 									<div class="form-group">
-										<!-- <label for="start-date">Start Date</label> -->
+										<label for="start-date">Start Date</label>
 										<input class="form-control required-input date-inputs" id="start-date" type="date" required>
 									</div>
 									
