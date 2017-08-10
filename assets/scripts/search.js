@@ -62,14 +62,13 @@ var getLongLat = function(address, title,desc,userId){
  	}).done(function(response) {
 	         console.log("get response = ",response);
 	    //capture latitude and longitude
-	    latitude = response.results[0].locations[0].latLng.lat;
-	    longitude = response.results[0].locations[0].latLng.lng;
+	    var markerLatitude = response.results[0].locations[0].latLng.lat;
+	    var markerLongitude = response.results[0].locations[0].latLng.lng;
     		
-    	//add to latAndLong object. Object will be pushed to 
     	//the longLatArray array.
        	var latAndLong = { 
-	       lat: latitude,
-	       lng: longitude,
+	       lat: markerLatitude,
+	       lng: markerLongitude,
 	       title: title,
 	       desc : desc,
 	       userId : userId
@@ -81,7 +80,7 @@ var getLongLat = function(address, title,desc,userId){
 	   //longLatArray = [];
 	    //push to array
 	    longLatArray.push(latAndLong);
-	    outOfForEach = true;
+	    //outOfForEach = true;
 	     console.log("searchLocationCounty ",searchLocationCounty);
 	     console.log("childCounty ",childCounty);
 
@@ -189,6 +188,8 @@ $("#createAdd").on("click",function(){
 	window.location.href = "createAdvert.html";	
 
 });
+
+
 $(".ad-link").on("click",function(){
 
 });
@@ -200,8 +201,9 @@ $(".ad-link").on("click",function(){
 // 		});
 
 function updateMap(longLatArray){
-
+		var index=0;
 		var infoWnd = new google.maps.InfoWindow();
+		
 	 //Map Object
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 10,
@@ -214,46 +216,44 @@ function updateMap(longLatArray){
         //loop through the longLatArray array do display markers for ads
     	for (var i = 0; i < longLatArray.length; i++){
     		var markerData = longLatArray[i];
-
-    		console.log("markerData", markerData.desc);
+    		var marker = null;
+    		// console.log("markerData", markerData.desc);
+        	
         	var marker = new google.maps.Marker({
           		position: new google.maps.LatLng(markerData.lat, markerData.lng),
-          		map: map,
-          		title: markerData.title,
+          		map: map,       		
+          		
         		});
         	(function(marker, markerData){
       			google.maps.event.addListener(marker, 'mouseover', function(e) {
+      				
 					infoWnd.setContent('<div class="scrollFix"><h6>' + markerData.title +  '</h6><br>'+ markerData.desc + '</div>');
 					infoWnd.open(map, marker);
+					 
 				});
+
 				google.maps.event.addListener(marker, 'mouseout', function() {
-				infoWnd.close();	
-					});
-      		})(marker, markerData);
-        }
-
-      
-   //     marker.addListener('mouseover', function() {
+					
+						infoWnd.close();
 				
-			// 	// Close active window if exists - [one might expect this to be default behaviour no?]				
-			// 	if(activeMarkerWindow != null) activeMarkerWindow.close();
+				});
 
-			// 	// Close info Window on mouseclick if already opened
-			// 	// infoWnd2.close();
-			
-			// 	// Open new InfoWindow for mouseover event
-			// 	infoWnd.open(map, marker);
-				
-			// 	// Store new open InfoWindow in global variable
-			// 	activeMarkerWindow = infoWnd;				
-			// }); 
-      // on mouseout (moved mouse off marker) make infoWindow disappear
-			
+				google.maps.event.addListener(marker, 'click', function() {
+			window.open("viewAd.html", "", "toolbar=no,scrollbars=yes,resizable=no,top=500,left=500,width=400,height=400");
+
+						// $("#display-ad h1").css({'visibility': 'visible',
+						// 						'z-index': 100});			
+				});
+
+
+      		})(marker, markerData);       
+      }
+
 }
 
 function initMap() {
 
-// 
+
 		//getCurrentLocation();
 		console.log("initMap lat ", latitude);
 		console.log("initMap long ", longitude);
@@ -267,6 +267,7 @@ function initMap() {
 		}else{
 			zoom = 10; //Zoomed in
 		}
+
 		// create an InfoWindow - for mouseover
 		var infoWnd = new google.maps.InfoWindow();
 		

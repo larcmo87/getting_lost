@@ -8,10 +8,14 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 	<!-- link to font awesome -->
+<<<<<<< HEAD
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<!-- firebase link -->
 	<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+=======
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">	
+>>>>>>> 5fb950593b38e60ca6d99f0906ff1ed659b16440
 
 	<!-- link to our style sheet -->
 	<link rel="stylesheet" type="text/css" href="assets/css/adstyle.css">
@@ -48,8 +52,7 @@
 			<!-- li class active for hover -->
 
               <li><a id="home" href="search.html">Home</a></li>
-              <li><a id="search" href="#">Search</a></li>
-              
+                          
              
             </ul>
 
@@ -62,8 +65,6 @@
             <!-- active class for background hover -->	
 
             <!-- span class sr-only -->
-              <li><a id="profile" href="#">Profile</a></li>
-
               <li><a id="yourAds" href="#">Your Ads</a></li>
 
               <li><a id="logOff" href="#" id="logOff">Log Off</a></li>
@@ -80,85 +81,104 @@
 				<div class="panel panel-primary">
 
 					<div class="panel-heading">
-						<h3 class="panel-title"><i class="fa fa-info-circle"></i> General Information</h3>
+						<h3 class="panel-title"><i class="fa fa-info-circle"></i> Ad Information (Required)</h3>
 					</div>
 
 						<div class="panel-body">
 
 							<!-- Entry form | Generla Information -->
 
-							<form>
+							<form id="ad-form">
 
 								<div class="form-group">
 									<label for="title-input">Title</label>
-									<input class="form-control" id="title-input" type="text">
+									<input class="form-control required-input" id="title-input" type="text" required>
 								</div>
 
 								<div class="form-group">
-
-									<label for="description-input-input">Description</label>
-									<!-- <input class="form-control" id="description-input" type="text"> -->
-									<textarea class="form-control" id="description-input" rows="4" cols="50"></textarea>
+									<label for="description-input">Description</label>									
+									<textarea class="form-control required-input" id="description-input" rows="4" cols="50" required></textarea>
 								</div>
-
+								
+									<div class="form-group">
+										<!-- <label for="start-date">Start Date</label> -->
+										<input class="form-control required-input date-inputs" id="start-date" type="date" required>
+									</div>
+									
+								
+								<div class="form-group">
+									<label for="start-time">Start Time</label>
+									<input class="form-control required-input" id="start-time" type="time" required>
+								</div>
+								<div class="form-group">
+									<label for="end-date">End Date</label>
+									<input class="form-control required-input" id="end-date" type="date" required>
+								</div>
+								<div class="form-group">
+									<label for="end-time">End Time</label>
+									<input class="form-control required-input" id="end-time" type="time" required>
+								</div>
 								<div class="form-group">
 									<label for="street-input">Street Address</label>
-									<input class="form-control" id="street-input" type="text">
+									<input class="form-control required-input" id="street-input" type="text" required>
 								</div>
 								
 								<div class="form-group">
 									<label for="city-input">City</label>
-									<input class="form-control" id="city-input" type="text">
+									<input class="form-control required-input" id="city-input" type="text" required>
 								</div>
 
 								<div class="form-group">
 									<label for="state-input">State</label>
-									<input class="form-control" id="state-input" type="text">
+									<input class="form-control required-input" id="state-input" type="text" required>
 								</div>
 
 								<div class="form-group">
 									<label for="zip-input">Zip</label>
-									<input class="form-control" id="zip-input" type="text">
+									<input class="form-control required-input" id="zip-input" type="text" pattern="\d{5}-?(\d{4})?" placeholder="99999" required>
 								</div>
+								<div class="panel panel-primary"> 
+ 									<div class="panel-heading">
+										<h3 class="panel-title"><i class="fa fa-user"></i> Seller Contact Information (Optional)</h3>
+										
+									</div>
+									<div class="panel-body">
 
+										<!-- Entry form | Contact info -->						
+
+										<div class="form-group">
+											<label for="name-input">Name</label>
+											<input class="form-control" id="name-input" type="text">
+										</div>
+
+										<div class="form-group">
+											 <label for="hone-input">Primary Phone</label><br/>
+		  									<input class="form-control" id="phone-input" type="tel" pattern="^\d{3}-\d{3}-\d{4}$" placeholder="999-999-999">
+											<!-- <label for="phone-input">Primary Phone</label>
+											<input class="form-control" id="phone-input" type="tel"> -->
+										</div>
+										<div class="form-group">
+											<input  id="radio-input" name="email" value="no-email" type="radio" checked>Do not use email
+											<input  id="radio-input" name="email" value="account-email" type="radio">Use account email
+											<input  id="radio-input" name="email" value="new-email" type="radio">Use differnt email
+										</div>
+										<div class="form-group">
+											<label for="email-input" id="email-label">Email Address</label>
+											<input class="form-control" id="email-input" name="email" type="email" align="right" required>
+										</div>
+										
+									</div>
+								</div>
 								
-
-								<!-- button <button class="btn btn-primary" id="add-train-btn" type="submit">Submit</button> -->
-
+								<button class="btn btn-primary" id="submit-btn" type="submit">Submit</button>
+								<button class="btn btn-info" id="cancel" type="button">Cancel</button>
+								<button class="btn btn-secondary" id="clear-form" type="reset">Clear Form</button>
+								
 							</form>
 						</div>
 					</div>
 
-				<div class="panel panel-primary">
 
-					<div class="panel-heading">
-						<h3 class="panel-title"><i class="fa fa-user"></i> Seller Info</h3>
-					</div>
-
-						<div class="panel-body">
-
-							<!-- Entry form | Contact info -->
-
-							<form>
-
-								<div class="form-group">
-									<label for="seller-name-input">Name</label>
-									<input class="form-control" id="seller-name-input" type="text">
-								</div>
-
-								<div class="form-group">
-									<label for="phone-input">Primary Phone</label>
-									<input class="form-control" id="phone-input" type="tel">
-								</div>
-
-								<div class="form-group">
-									<label for="email-input">Email Address</label>
-									<input class="form-control" id="email-input" type="email">
-								</div>
-
-							</form>
-						</div>
-					</div>
 
 				<!-- Upload photos
 
@@ -190,15 +210,12 @@
 							</div>
 						</div>
  -->
-				</div>
-
+				
 
 
 					<!-- master submit button or continue -->
 
-					<button class="btn btn-primary" id="add-train-btn" type="submit">Submit</button>
-					<button class="btn btn-secondary" id="cancel" type="button">Cancel</button>
-
+				
 				<!-- div class col lg 12 ending div -->
 				</div>
 
@@ -208,12 +225,14 @@
 	<!-- container div -->
 	</div>
 
-	<!-- Bootstrap jQuery CDN -->
+	<!-- link to JQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-	<!-- Bootstrap JavaScript link -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+	<!-- link to jquery mask library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+	<!-- firebase link -->
+	 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+	<!-- link to moments js library -->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 	<!-- link to our javascript -->
 	<script src="assets/scripts/newAd.js"></script>
 

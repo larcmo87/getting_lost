@@ -10,12 +10,40 @@
 	color: #242e33;
 }
 
+
 #header-brand:hover {
 	background-color: #2babe2;
 }
 
 #home:hover, #search:hover, #profile:hover, #yourAds:hover, #logOff:hover {
 	background-color: #2babe2;
+}
+
+#email-input{
+	display:none;
+
+}
+
+#email-label{
+	display:none;
+}
+
+/*.date-inputs{
+	width: 47%;
+	float: left;
+	display:inline-block;
+}
+
+#end-date{
+	margin-left: 30px;
+}*/
+
+#clear-form{
+	float:right;
+	}
+
+input[type="radio"]{
+  margin: 0 10px 0 10px;
 }
 
 img#yeti {
@@ -27,6 +55,18 @@ img#yeti {
 .row {
 	margin-right: 0px;
 	margin-left: 0px;
+}
+
+#ad-form{
+	margin-left: 0px;
+}
+
+
+#seller-info{
+	margin-left: 0;
+	width:100%;
+	height:30px;
+	background-color: #2babe2;
 }
 
 #cancel:hover {
