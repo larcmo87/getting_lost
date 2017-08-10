@@ -5,9 +5,11 @@
 
 #header-brand {
   color: #242e33;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-#home, #search, #profile, #yourAds, #logOff {
+#home, #search, #about, #logOff {
   color: #242e33;
 }
 
@@ -15,7 +17,7 @@
   background-color: #2babe2;
 }
 
-#home:hover, #search:hover, #profile:hover, #yourAds:hover, #logOff:hover {
+#home:hover, #search:hover, #about:hover, #logOff:hover {
   background-color: #2babe2;
 }
 
