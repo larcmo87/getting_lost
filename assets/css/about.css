@@ -1,3 +1,42 @@
+#header {
+	background-color: #effaff;
+}
+
+#header-brand {
+	color: #242e33;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#home, #about, #logOff {
+	color: #242e33;
+}
+
+#header-brand:hover {
+	background-color: #2babe2;
+}
+
+#home:hover, #about:hover, #logOff:hover {
+	background-color: #2babe2;
+}
+
+img#yeti {
+	display: inline-block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.jumbotron, #jumbo {
+	background-color: #effaff;
+	border: solid #337ab7 1px;
+	color: #242e33;
+}
+
+.row {
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
 body {
-	background-color: red;
+	background-color: #2babe2;
 }

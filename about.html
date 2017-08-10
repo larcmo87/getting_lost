@@ -4,31 +4,117 @@
 	<meta charset="UTF-8">
 	<title>About</title>
 
-	<!-- bootstrap -->
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+	<!-- link to bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<!-- bootstrap -->
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-
-	<!-- font awesome -->
+	<!-- link to font awesome -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<!-- link to firebase goes here -->
-  	<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+	<!-- firebase link -->
+	<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
 
-	<!-- style sheet -->
+	<!-- link to our style sheet -->
 	<link rel="stylesheet" type="text/css" href="assets/css/about.css">
 
 </head>
 <body>
-	<h1>About</h1>
-	
+
+	<!-- master container div -->
+	<div class="container">
+
+      <!-- Static navbar -->
+      <nav id="header" class="navbar navbar-default">
+
+        <div class="container-fluid">
+
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <img id="yeti" src="assets/images/yeti-logo.png"> 
+
+          </div>
+
+          <div id="navbar" class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav">
+
+			<!-- li class active for hover -->
+
+			  <a id="header-brand" class="navbar-brand" href="#">YetiPreneur</a>
+
+              <li><a id="home" href="search.html">Home</a></li>                                     
+            </ul>
+
+			<!-- nav bar right items -->
+
+            <ul class="nav navbar-nav navbar-right">
+
+            <!-- active class for background hover -->	
+
+            <!-- span class sr-only -->
+              <li><a id="about" href="#">About</a></li>
+
+              <li><a id="logOff" href="#" id="logOff">Log Off</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+  <!-- jumbotron about content -->
+  <div class="jumbotron">
+
+    <h2>Application Concept</h2>
+    <p>This is where we can discuss the "method to the madness" of our Garage Sale web app</p>
+
+  </div>
+
+  <div class="jumbotron">
+
+    <h2>Motivation for Development</h2>
+    <p>Basically why we decided to throwdown some valiant effort building this awesome application</p>
+
+  </div>
+
+  <div class="jumbotron">
+
+    <h2>The Design Process</h2>
+    <p>Step 1, Step 2, Step 3</p>
+
+  </div>
+
+  <div class="jumbotron" id="jumbo">
+
+    <h2>Super Tech</h2>
+    <p>And... How these work: HTML5, CSS, JavaScript, BootStrap, Firebase Authentication, Google Maps API, MapQuest Geo Encoding API, Font Awesome CSS, jQuery, jQuery.mask, jQuery.moment, Firebase.js, Firebaseui.js</p>
+
+  </div>
+
+  <div class="jumbotron">
+
+    <h2>It's Demo Time</h2>
+    <p>We'll go ahead and let Rob take it from here.</p>
+
+  </div>
+
+   <div class="jumbotron">
+
+    <h2>Future Development</h2>
+    <p>How Elon Musk might utilize this technology.</p>
+
+  </div>
 
 
 
-<!-- jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+<!-- master container div -->
+</div>
 
 </body>
 </html>
