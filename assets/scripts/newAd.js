@@ -144,9 +144,9 @@ $("#submit-btn").on("click",function(){
  			title : title,
  			desc : desc,
             startDate : moment(startDate).format("MM/DD/YYYY").toString(),
-            startTime : moment(startTime).format("hh:mm"),
+            startTime : startTime,
             endDate : moment(endDate).format("MM/DD/YYYY").toString(),
-            endTime : moment(endTime).format("hh:mm"),
+            endTime : endTime,
             name : name,
             phone : phone,
             email : email,
@@ -222,7 +222,7 @@ $("#submit-btn").on("click",function(){
 		 database.ref("Ads").push(newAd);
 	 }
 	//Goto search page
-	// window.location.href = "search.html";
+	 window.location.href = "search.html";
 });
 
 

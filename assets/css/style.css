@@ -1,3 +1,23 @@
+/*** body content ***/
+body{
+  background-color: #2babe2;
+}
+
+h4 {
+  color: #242e33;
+}
+
+img{
+  display: block;
+    margin: auto;
+}
+
+img#yeti {
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 /*** header ***/
 #navver {
   background-color: #effaff;
@@ -11,6 +31,7 @@
 
 #home, #search, #about, #logOff {
   color: #242e33;
+  /*margin-bottom: 10px;*/
 }
 
 #header-brand:hover {
@@ -21,12 +42,10 @@
   background-color: #2babe2;
 }
 
-img#yeti {
-  display: inline-block;
-  margin-right: auto;
-  margin-left: auto;
-}
 
+#search{
+  margin-bottom: 0px;
+}
 /*** jumbotron header ***/
 #header{
   background-color: #effaff;
@@ -34,31 +53,19 @@ img#yeti {
   border: solid #337ab7 1px;
   padding-bottom: 10px;
   padding-top: 10px;
+  margin-bottom: 10px;
 }
 
 #title {
   color: #242e33;
 }
 
-/*** body content ***/
-.row {
-  margin-right: 0px;
-  margin-left: 0px;
-}
-
-body{
-  background-color: #2babe2;
-}
-
-h4 {
-  color: #242e33;
-}
-
 /*** map content ***/
-
 #map {
-  height: 600px;
+  height: 500px;
   width: 100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
     
 #content {
@@ -77,20 +84,71 @@ h4 {
   border-color: blue;
   border-width: 1px;
 }
-/*#map{
-  background-color: white;
-  margin-left: 30px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border-style: solid;
-  border-radius: 5px;
-  border-color: blue;
-  border-width: 1px;
-}*/
-img{
-  display: block;
-    margin: auto;
+
+/* div container for the ad close x button  */
+#ad-container{
+  background-image: url("../images/white-paper-texture-hd.jpg");
+  margin-top: 10px;
+  display:none;
+  width:100%;
+  height:250px;
+  border:1px solid #000000;
+  z-index: 0;
 }
+
+/* ad close x button */
+#ad-close{
+    float:right;   
+    margin-top: 5px;
+    height: 25px;
+    width: 25px;   
+    border: 2px solid black;
+    position: relative;
+}
+
+/* display infor for the ad close x button  */
+#ad-close:after{
+    position: absolute;
+    top: -38px;
+    bottom: 0;
+    left: -3px;
+    right: 0;
+    content: "\274c"; /* use the hex value here... \274c*/
+    font-size: 20px; 
+    color: black;
+    line-height: 100px;
+    text-align: center;
+}
+/* tooltip for the ad close x button */
+#ad-tooltiptext{
+    visibility: hidden;
+    width: 120px;
+    background-color: #337AB7;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+     top: -38px;
+    left: -60px;
+    z-index: 1;
+}
+
+/* hover event on the ad close x button */
+#ad-close:hover #ad-tooltiptext {
+    visibility: visible;
+}
+
+#ad-location-contact-info{
+  
+  height: 100%;
+  border-right: 2px solid black;
+  overflow-y: auto;
+  padding-bottom: 5px;
+}
+
 #createAdd{
   border-radius: 5px;
 }
@@ -104,3 +162,43 @@ img{
   visibility: hidden;
   z-index: 4;
 }
+
+#marker-title{
+  font-size: 20px;
+  color: #337AB7;
+  margin-bottom: 0;
+}
+
+#inforwindow-container{
+  margin: 0 0 0 0;  
+  padding: 0 0 0 0;
+}
+
+#ad-description{
+  overflow-y: auto;
+}
+
+/* ***Classes*** */
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.ad-display-info{
+  font-size: 20px;
+}
+
+.ad-headers h2{
+ 
+  
+}
+
+
+.ad-headers h4{
+  
+  font-size: 16px;
+  font-weight: bold;
+}
+
