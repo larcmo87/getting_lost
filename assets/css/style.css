@@ -61,11 +61,17 @@ img#yeti {
 }
 
 /*** map content ***/
+#map-container{
+  
+  
+}
 #map {
   height: 500px;
   width: 100%;
   margin-bottom: 10px;
   margin-top: 10px;
+  border-style: inset;
+  
 }
     
 #content {
@@ -87,13 +93,12 @@ img#yeti {
 
 /* div container for the ad close x button  */
 #ad-container{
-  background-image: url("../images/white-paper-texture-hd.jpg");
+  background-image: url("../images/white-paper-background_1154-683.jpg");
   margin-top: 10px;
   display:none;
   width:100%;
-  height:250px;
+  height: 100%;
   border:1px solid #000000;
-  z-index: 0;
 }
 
 /* ad close x button */
@@ -104,6 +109,7 @@ img#yeti {
     width: 25px;   
     border: 2px solid black;
     position: relative;
+    z-index: 2;
 }
 
 /* display infor for the ad close x button  */
@@ -118,7 +124,9 @@ img#yeti {
     color: black;
     line-height: 100px;
     text-align: center;
+    z-index: 7;
 }
+
 /* tooltip for the ad close x button */
 #ad-tooltiptext{
     visibility: hidden;
@@ -133,20 +141,24 @@ img#yeti {
     position: absolute;
      top: -38px;
     left: -60px;
-    z-index: 1;
+    z-index: 7;
 }
 
 /* hover event on the ad close x button */
 #ad-close:hover #ad-tooltiptext {
     visibility: visible;
+
 }
 
 #ad-location-contact-info{
-  
-  height: 100%;
-  border-right: 2px solid black;
+
+  color: #000000;
+  height: 400px;
+  border: 0.5px solid black;
+  border-style:inset;
   overflow-y: auto;
   padding-bottom: 5px;
+ 
 }
 
 #createAdd{
@@ -155,12 +167,6 @@ img#yeti {
 
 #logOff{
   border-radius: 5px;
-}
-
-#display-ad h1{
-  position:absolute;
-  visibility: hidden;
-  z-index: 4;
 }
 
 #marker-title{
@@ -174,10 +180,6 @@ img#yeti {
   padding: 0 0 0 0;
 }
 
-#ad-description{
-  overflow-y: auto;
-}
-
 /* ***Classes*** */
 .row {
   margin-right: 0px;
@@ -186,19 +188,23 @@ img#yeti {
   margin-top: 5px;
 }
 
+.ad-description{
+     height:100%;
+     padding-bottom:0px;
+     overflow-y: auto;
+     z-index: 0;
+}
+
 .ad-display-info{
-  font-size: 20px;
+  height: 297px;
+  border: 0 solid transparent;
+  background: inherit;  
+  font-family: arial, helvetica;
+  font-size:20px;
 }
-
-.ad-headers h2{
- 
-  
-}
-
 
 .ad-headers h4{
-  
+  height:calc(.ad-description{});
   font-size: 16px;
   font-weight: bold;
 }
-

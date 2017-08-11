@@ -92,14 +92,14 @@ var getLongLat = function(address, title,desc,userId,address,startDate,startTime
 	    //push to array
 	    longLatArray.push(latAndLong);	  
 
-	    //Compare the search City County(searchLocationCounty) against the ad address county (childCounty)
+	   /*Compare the search City County(searchLocationCounty) against the ad address county (childCounty)*/
 	    if(searchLocationCounty.trim() === childCounty.trim()){
 	    	var adSearchResult = {
 	    		title : title
 	    	}	    		 
 
-	    	//longLatArray.push(latAndLong);outOfForEach = true;
-	    	//Add ad info to search list
+	    	/*longLatArray.push(latAndLong);outOfForEach = true;
+	    	Add ad info to search list*/
 	    	$("#ads").append("<li class='ad-link' data-userId='" + userId + 
 	    	 "'><a href='viewAd.html'>" + title + "</a><h4>" + desc + "</h4></li>");
 	    }
@@ -267,37 +267,38 @@ function updateMap(longLatArray){
 					$("#ad-location-contact-info").append("<h4 class='ad-headers'><u>Sale Times</u></h4>");
 					$("#ad-location-contact-info").append(moment(markerData.startTime, "HH:mm").format("hh:mm A") + " - " + moment(markerData.endTime, "HH:mm").format("hh:mm A"));		
 
+					/*If name input value is not blank append*/
 					if(markerData.name !== ""){
 						$("#ad-location-contact-info").append("<h4 class='ad-headers'><u>Seller Name</u></h4>");
 						$("#ad-location-contact-info").append(markerData.name);
 					}
+
+					/*If phone input value is not blank append*/
 					if(markerData.phone !== ""){
 						$("#ad-location-contact-info").append("<h4 class='ad-headers'><u>Seller phone</u></h4>");
 						$("#ad-location-contact-info").append("<a href='tel:+1" + markerData.phone +"'>"  + markerData.phone + "</a>");
 					}
+
+					/*If email input value is not blank append*/
 					if(markerData.email !== ""){
 						$("#ad-location-contact-info").append("<h4 class='ad-headers'><u>Seller email</u></h4>");
 						$("#ad-location-contact-info").append("<a href='mailto:" + markerData.email + "'>" + markerData.email + "</a>");
 					}
 
 					//Clear
-					$("#ad-description").html("");
-					$("#ad-description").append("<h2 class='ad-headers'>" + markerData.title + "</h2");
-					$("#ad-description").append("<p class='ad-display-info'>" + markerData.desc + "</p");
-
+					$(".ad-description").html("");
+					$(".ad-description").append("<h2 class='ad-headers'>" + markerData.title + "</h2");
+					console.log("markerData.desc ",markerData.desc);
+					$(".ad-description").append("<pre class='ad-display-info'>" + markerData.desc + "</pre>");
 
 				});
-
-
-
-
       		})(marker, markerData);       
       }
-
 }
 
-function initMap() {
 
+//For initial load of map
+function initMap() {
 
 		//getCurrentLocation();
 		console.log("initMap lat ", latitude);
@@ -321,61 +322,5 @@ function initMap() {
           zoom: zoom,
           //center on latitude longitude
           center: new google.maps.LatLng(latitude, longitude),
-        });
-  //       console.log("longLatArray.length",longLatArray.length);
-      
-  //       //loop through the longLatArray array do display markers for ads
-  //   	for (var i = 0; i < longLatArray.length; i++){
-  //       var marker = new google.maps.Marker({
-  //         position: new google.maps.LatLng(longLatArray[i].lat, longLatArray[i].lng),
-  //         map: map,
-  //         title: title
-  //       });
-  //       marker.markerCount = i; infoWnd.setContent('<div class="scrollFix">' + 'Welcome to ' +  longLatArray[i].lat + '</div>');
-
-  //       console.log(marker.markerCount);
-  //     }
-
-  //     google.maps.event.addListener(map,'click',function(event) {
-  //               console.log(event.latLng.lat());
-  //                // document.getElementById('lngspan').innerHTML = event.latLng.lng()
-  //            });
-  //    function markerClicked(e) {
-  //   		console.log('Marker ' + marker.markerCount + ' has been clicked');
-    		
-		// }
-
-		// google.maps.event.addListener(marker, "click", function(marker) {
-		// 	console.log('Marker ' + marker.markerCount + ' has been clicked');
-  // // overlay = GOverlay or null
-  // // latlng = GLatLng
-  // // overlaylatlng = GLatLng or null
-		// });
-	  // marker.addListener('click',markerClicked);
-   //    marker.addListener('mouseover', function() {
-				
-			// 	// Close active window if exists - [one might expect this to be default behaviour no?]				
-			// 	if(activeMarkerWindow != null) activeMarkerWindow.close();
-
-			// 	// Close info Window on mouseclick if already opened
-			// 	// infoWnd2.close();
-			
-			// 	// Open new InfoWindow for mouseover event
-			// 	infoWnd.open(map, marker);
-				
-			// 	// Store new open InfoWindow in global variable
-			// 	activeMarkerWindow = infoWnd;				
-			// }); 
-   //    // on mouseout (moved mouse off marker) make infoWindow disappear
-			// google.maps.event.addListener(marker, 'mouseout', function() {
-			// 	infoWnd.close();	
-			// });
+        }); 
   }
-
-//When the page loads call the getAds() to write firebase data to array longLatArray
-//This helps the search list data to load quicker when doing a search on a location
-/*$("document").ready(function(){
-		 getAds();
-		 initMap();
-});*/
-

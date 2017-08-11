@@ -78,6 +78,7 @@
             		<!-- active class for background hover -->
 
             		<!-- span class sr-only -->
+            			<li><a id="about" href="createAdvert.html">Create Ad</a></li>
             			<li><a id="about" href="about.html">About</a></li>
 
             			<li><a id="logOff" href="index.html">Log Off</a></li>
@@ -105,66 +106,39 @@
 
 					   <div id="filter-container">
 
-					   	<label for="location-input"><h4>Location</h4></label>
+						   	<label for="location-input"><h4>Location</h4></label>
 
-					   	<input type="text" id="location-input" placeholder="City, State or Zip Code">
+						   	<input type="text" id="location-input" placeholder="City, State or Zip Code">								
+							<button class="btn btn-primary" id="location-btn" type="search">Search</button>
 							
-						<button class="btn btn-primary" id="location-btn" type="search">Search</button>
-
-					   	  <!-- <button type="button" id="useCurrentLocation">Use your current location</button> -->
-
-						<button class="btn btn-primary" id="createAdd" type="button">Create your ad</button>
-
 					   </div>
 					</div>
 
 				<!-- search row ending div -->
 				</div>
-
 				<!-- map content -->
 				<div class="row" id="content">
 					
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<div id="ad-container">
+						<!-- Ad Row -->
+						<div class="row" id="ad-container">
+							<!-- BUTTON FOR CLOSING AD -->
+							<button id="ad-close"type="button">X<span id="ad-tooltiptext">Close Ad</span></button>
 							<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" id="ad-location-contact-info">
-								
+								<!-- AD, LOCATION AND CONTACT INFO GO HERE -->
 							</div>
-							<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-
-								<div id="ad-close">
-									
-									<span id="ad-tooltiptext">Close Ad</span>
-								</div>
-
-								<p id="ad-description"></p>
+							<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 ad-description">								
+								<!-- AD TITLE AND DETAIL GO HERE -->
 							</div>
-						</div>
+						</div> <!-- End of Ad content <--></-->
+
 						<div id="map-container">	
 							<div id="map"></div>
-
-						<!-- <div id="map-container">
-							<div id="display-ad">
-									
-								<h1> Just a test<h1>
-							</div>	
-							<div id="map">
-								
-							</div>
-
-						</div> -->
-
+						</div>
 					</div>
-
-
-				<!-- map row ending div -->
-
-					
+				<!-- map row ending div -->					
 				</div>
-				<div>
-					
-
-				</div>
-				
+			
 	<!-- container ending div -->			
 	</div>
 	

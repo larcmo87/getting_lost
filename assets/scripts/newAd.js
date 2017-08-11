@@ -83,7 +83,7 @@ $("#submit-btn").on("click",function(){
  	var desc = "";
     var startDate = "";
     var startTime = "";
-    var endDate = "";
+    // var endDate = ""; **Maybe used in future
     var endTime = "";
  	var street = "";
  	var city = "";
@@ -98,7 +98,7 @@ $("#submit-btn").on("click",function(){
  	desc = $("#description-input").val();
     startDate = $("#start-date").val();
     startTime = $("#start-time").val();
-    endDate = $("#end-date").val();
+    // endDate = $("#end-date").val();  **Maybe used in future
     endTime = $("#end-time").val();
  	street = $("#street-input").val();
  	city = $("#city-input").val();
@@ -111,7 +111,7 @@ $("#submit-btn").on("click",function(){
 
     console.log(startDate);
     console.log(startTime);
-    console.log(endDate);
+    
     console.log(endTime);
      console.log("email",email);
      //Current authorized firebase user
@@ -145,7 +145,7 @@ $("#submit-btn").on("click",function(){
  			desc : desc,
             startDate : moment(startDate).format("MM/DD/YYYY").toString(),
             startTime : startTime,
-            endDate : moment(endDate).format("MM/DD/YYYY").toString(),
+            // endDate : moment(endDate).format("MM/DD/YYYY").toString(), **Maybe used in future
             endTime : endTime,
             name : name,
             phone : phone,
@@ -210,10 +210,7 @@ $("#submit-btn").on("click",function(){
 		    }
     
 		});
-
-
  	}
- 		console.log("pushData",pushData);
 
  	//Push to firebase only if all the required fields have been entered
  	if(pushData){
