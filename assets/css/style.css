@@ -29,7 +29,7 @@ img#yeti {
   margin-left: auto;
 }
 
-#home, #search, #about, #logOff {
+#home, #about, #logOff {
   color: #242e33;
   /*margin-bottom: 10px;*/
 }
@@ -38,7 +38,7 @@ img#yeti {
   background-color: #2babe2;
 }
 
-#home:hover, #search:hover, #about:hover, #logOff:hover {
+#home:hover, #about:hover, #logOff:hover {
   background-color: #2babe2;
 }
 
@@ -47,17 +47,24 @@ img#yeti {
   margin-bottom: 0px;
 }
 /*** jumbotron header ***/
-#header{
-  background-color: #effaff;
-  text-align: center;
+#header {
+  background-image: url(../../assets/images/watertreasure.png);
+  background-repeat: round;
+  color: white;
+  text-align: left;
   border: solid #337ab7 1px;
+<<<<<<< Updated upstream
   padding-bottom: 10px;
   padding-top: 10px;
   margin-bottom: 10px;
+=======
+  padding-bottom: 50px;
+  padding-top: 5px;
+>>>>>>> Stashed changes
 }
 
 #title {
-  color: #242e33;
+  color: white;
 }
 
 /*** map content ***/
