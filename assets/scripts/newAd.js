@@ -217,6 +217,7 @@ $("#submit-btn").on("click",function(){
 
 		 //Add new Ad to Firebase                
 		 database.ref("Ads").push(newAd);
+		 
 		 //Goto search page
 	 	window.location.href = "search.html";
 	 }	
