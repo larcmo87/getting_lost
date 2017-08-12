@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 
 	<!-- bootstrap -->
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<script async defer
     		// src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkAdz3kxlJXSr51pZrGIiUYjnbdzmCulA&callback=initMap">
@@ -35,7 +35,6 @@
 	
 </head>
 <body>
-	<div class="container-fluid">
 	<!-- master container div -->
 	<div class="container">
 
@@ -53,19 +52,21 @@
               			<span class="icon-bar"></span>
               			<span class="icon-bar"></span>
             		</button>
-
+					
 					<img id="yeti" src="assets/images/yeti-logo.png">
+					<a id="header-brand" href="search.html">YetiPreneur</a> <!-- class="navbar-brand"  -->
 
 				<!-- navbar-header closing div -->
             	</div>
 
+					
             	<div id="navbar" class="navbar-collapse collapse">
-
+					
             		<ul class="nav navbar-nav">
 
             		<!-- li class active for hover -->
 
-						<a id="header-brand" class="navbar-brand" href="search.html">YetiPreneur</a>
+						
 
             			<li><a id="home" href="search.html">Home</a></li>
 
@@ -105,14 +106,13 @@
 
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-					   <div id="filter-container">
+					  <!--  <div id="filter-container"> -->
 
-						   	<label for="location-input"><h4>Location</h4></label>
-
+						   	
 						   	<input type="text" id="location-input" placeholder="City, State or Zip Code">								
 							<button class="btn btn-primary" id="location-btn" type="search">Search</button>
 							
-					   </div>
+					   <!-- </div> -->
 					</div>
 
 				<!-- search row ending div -->
@@ -149,6 +149,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!-- moment js library -->
 	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<!-- logic -->
  	<script src="assets/scripts/search.js"></script>
 
@@ -156,6 +157,6 @@
  	<script async defer
     		// src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkAdz3kxlJXSr51pZrGIiUYjnbdzmCulA&callback=initMap">
     		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkAdz3kxlJXSr51pZrGIiUYjnbdzmCulA"></script>
-	</div>
+	
 </body>
 </html>

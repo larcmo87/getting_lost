@@ -18,16 +18,53 @@ img#yeti {
   margin-left: auto;
 }
 
+/* Location search bar */
+input[type=text] {
+    margin-left: 0px;
+    width: 240px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url(../../assets/images/search.png);
+    background-position: 5px 3px; 
+    background-repeat: no-repeat;
+    padding: 10px 20px 10px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+ /* When the input field gets focus, change its width to 30%  */
+input[type=text]:focus {
+    width: 30%;
+
+} 
+#location-input{
+  margin-left: 0;
+}
+#filter-container{
+  margin-left: 0px;
+  padding-left: 0px;
+  border: 2px solid black;
+  width: 100%;
+}
 /*** header ***/
 #navver {
   background-color: #effaff;
+  margin-bottom: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 #header-brand {
+  clear:both;
+  display:inline;
   color: #242e33;
   margin-right: auto;
-  margin-left: auto;
+  /*margin-left: auto;*/
 }
+
+
 
 #home, #search, #about, #logOff {
   color: #242e33;
@@ -35,6 +72,8 @@ img#yeti {
 }
 
 #header-brand:hover {
+  float:left;
+  display:inline;
   background-color: #2babe2;
 }
 
@@ -44,7 +83,9 @@ img#yeti {
 
 
 #search{
-  margin-bottom: 0px;
+  width:100%;
+  padding-left:0px;
+  margin-left: 0px;
 }
 /*** jumbotron header ***/
 #header{
@@ -53,9 +94,13 @@ img#yeti {
   color: white;
   text-align: left;
   border: solid #337ab7 1px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
 
   /* padding-bottom: 10px;
   padding-top: 10px; */
+
+  margin-top: 0px;
   margin-bottom: 10px;
 
    padding-bottom: 50px;
@@ -91,16 +136,18 @@ img#yeti {
 #map {
   height: 500px;
   width: 100%;
- /*  margin-bottom: 10px;
- margin-top: 10px; */
+   margin-bottom: 10px;
+ margin-top: 10px; 
   /*border-style: inset;*/
+  border-radius: 5px;
+  border: 1px solid black;
   
 }
     
 #content {
   background-color: #effaff;
-  /*border: solid #337ab7 1px;*/
-  /*border-radius: 5px;*/
+  border: solid black 1px;/*#337ab7*/
+  border-radius: 5px;
 }
 
 #list{
